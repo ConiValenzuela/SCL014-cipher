@@ -10,6 +10,7 @@ document.getElementById("start").addEventListener("click", function displayCiphe
     showCipherPage.classList.remove("hidden");
 });
 
+
 //cipher button to show encrypted text
 
 //decipher button to show unencrypted text

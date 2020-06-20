@@ -38,7 +38,6 @@ body{
 
 }
 .welcome-start{
-   
     background-color: none;
     color: white;
     font-family: DIN Alternate;
@@ -109,5 +108,5 @@ body{
 
 img:hover {
     transform: scaleX(-1);
-  }
+    }
 
