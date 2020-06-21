@@ -1,77 +1,53 @@
 const cipher = {
-//isValid:(creditCard)=>
-//cipher.encode(offset, string) =>
-//cipher.decode(offset, string) => 
-};
 
-export default cipher;
-// get input text from HTML
-
-let inputText = document.getElementById("inputText").value = "ab&c";
-let offset = document.getElementById("offset").value= 1;
-let asciiNum;
-let newAsciiNum;
-
-let outputText = document.getElementById("outputText").innerHTML;
-
-//convert input text to upper case and then to Acci number, apply offset to Ascii number
-
-function encode() {
+//encode function for text encryption.
+encode:(offset, inputText) => {
+  let asciiNum;
+  let newAsciiNum;
   let newText = "";
+  //converts all letters to upper case.
   let upperCaseText = inputText.toUpperCase();
+  //for loop through each character from user input text.
   for ( var i = 0; i < upperCaseText.length; i++){
+  //convert to correspondent ASCII number.
   asciiNum = upperCaseText.charCodeAt(i);
-  if (asciiNum >=65 && asciiNum <=90){
+    //number must be between 65 and 90; "A" and "Z" on ASCII table.
+    if (asciiNum >= 65 && asciiNum <= 90) {
+    //if it is, apply formula to shift letter position on ASCII table according to offset key.
     newAsciiNum = (asciiNum - 65 + offset) %26 + 65;
-  } else {}
+    //if is not, dont shift ASCII table position.
+    } else {
+    newAsciiNum = asciiNum;
+    }
+  //obtain letters corresponding to ASCII table numbers and concatenate them into a string.
   newText += String.fromCharCode(newAsciiNum);
+  }
+  return newText  
+  },
+
+//decode function for text decryption.
+  decode:(offset, inputText) =>  {
+  let asciiNum2;
+  let newAsciiNum2;
+  let newText2 = "";
+  //converts all letters to upper case.
+  let upperCaseText2 = inputText.toUpperCase();
+  //for loop through each character from user input text.
+  for ( var i = 0; i < upperCaseText2.length; i++){
+  //convert to correspondent ASCII number
+  asciiNum2 = upperCaseText2.charCodeAt(i);
+    //number must be between 65 and 90; "A" and "Z" on ASCII table.
+    if (asciiNum2 >=65 && asciiNum2 <=90) {
+    //if it is, apply formula to shift letter position on ASCII table according to offset key.
+    newAsciiNum2 = (asciiNum2 - 65 - offset) %26 + 65;
+    //if is not, dont shift ASCII table position.
+    } else {
+    newAsciiNum2 = asciiNum2;
+  }
+  //obtain letters corresponding to ASCII table numbers and concatenate them into a string.
+  newText2 += String.fromCharCode(newAsciiNum2);
+  }
+  return newText2
   } 
-  //return newText("");
-  //if (asciiNum < 65 && asciiNum > 90 ) {
-    //return newText;
-
-  //outputText = newText;
-  //console.log(asciiNum);
-  //console.log(newAsciiNum);
-  console.log(newText);
-  }
-
-encode(); 
-
-
-
-//console.log(inputText);
-
-// transform new ascii number to new letters 
-// imprimir al outputText
-
-// 
-/*function newAscii() {
-  let newAsciiNum = (asciiNum - 65 + offset) %26 + 65;
-  console.log(newAsciiNum)
-}
-newAscii();
-
-
-
-
-
-
-
-
-/* 
-      
-  }
-}
-      return solved;
-}
-
-
-
-// convertir a ASCII para determinar valor de cada caracter .charCodeAt()
-// obtener offset desde html = declararlo
-// diseñar función para aplicar formula cipher (x-65+n)%26+65 
-// entregar en HTML texto cifrado .fromCharCode()
-
-*/
-console.log("test de console log");
+};
+export default cipher;

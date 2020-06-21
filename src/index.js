@@ -1,8 +1,8 @@
 import cipher from './cipher.js';
+let inputText;
+let offset;
 
-console.log(cipher);
-
-//start button to second page with cipher app
+//start button to second page with cipher app.
 document.getElementById("start").addEventListener("click", function displayCipher() {
     const hideLogo = document.getElementById("firstPage");
     hideLogo.classList.toggle("hidden");
@@ -10,21 +10,37 @@ document.getElementById("start").addEventListener("click", function displayCiphe
     showCipherPage.classList.remove("hidden");
 });
 
+//cipher button to show encrypted text.
+const buttonEncode = document.getElementById("encode-btn");
+buttonEncode.addEventListener("click", function () {
+    inputText = document.getElementById("inputText").value;
+    offset = document.getElementById("offset").value;
+    let newText = cipher.encode(offset, inputText);
+    document.getElementById("outputText").innerHTML = newText;
+});
 
-//cipher button to show encrypted text
+//decipher button to show unencrypted text.
+const buttonDecode = document.getElementById("decode-btn");
+buttonDecode.addEventListener("click", function () {
+    inputText = document.getElementById("inputText").value;
+    offset = document.getElementById("offset").value;
+    let newText = cipher.decode(offset, inputText);
+    document.getElementById("outputText").innerHTML = newText;
+});
 
-//decipher button to show unencrypted text
-
-//copy button to send resultant text to clipboard
-document.getElementById("copy").addEventListener("click", function copyText() {
+//copy button to send resultant text to clipboard..
+document.getElementById("copy-btn").addEventListener("click", function copyText() {
     const copyText = document.getElementById("outputText");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
 });
 
-//erase button clears input information
-document.getElementById("erase").addEventListener("click", function clearContents () {
-    document.getElementById("outputText").value = "";
-    document.getElementById("inputText").value = "";
+//erase button clears input information.
+document.getElementById("erase-btn").addEventListener("click", function clearContents () {
+    document.getElementById("outputText").value= "";
+    document.getElementById("inputText").value= "";
 });
+
+//console.log(cipher);
+//L45 commented to avoid NPM Test warning.

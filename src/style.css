@@ -1,24 +1,3 @@
-input[type=number]{
-    width: 2rem;
-    background-color: #ffffff4d; 
-    border-radius: 0.3rem;
-    box-shadow: 0rem 0.5rem 0.5rem rgb(0, 0, 0,0.40);
-    border-style: none;
-    color: rgba(255, 255, 255, 0.767);
-}
-
-textarea{
-    background-color: rgba(196,196,196,0.2); 
-    border-radius: 0.5rem;
-    box-shadow: 0rem 0.5rem 0.5rem rgb(0, 0, 0,0.40);
-    border-style: none;
-    align-items: center;
-    text-align: center;
-    display: flexbox;
-    align-content: center;
-    justify-content: center;
-}
-
 body{
     background-color: #313131; 
     width: 100%;
@@ -62,7 +41,28 @@ body{
     padding: 0.5rem 100%;
 }
 
+/* hides welcome screen on first page */
+.hidden{
+    display: none;
+}
+
+/* flips logo images for extra hacker effect */
+img:hover {
+    transform: scaleX(-1);
+    }
+
+
 /* second page */
+
+.secondPage {
+    padding-top: 3rem;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
 .container-menu-logo{
     padding-top: 11.1rem;
     width: 30%;
@@ -74,18 +74,29 @@ body{
     justify-content: center;
 }
 
-.secondPage {
-    padding-top: 3rem;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-}
-
 .form-content{
     padding-top: 1rem;
+    border-style: none;
+    color: rgba(255, 255, 255, 0.767);
+}
+
+textarea{
+    background-color: rgba(196,196,196,0.2); 
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.5rem 0.5rem rgb(0, 0, 0,0.40);
+    border-style: none;
+    align-items: center;
+    text-align: center;
+    display: flexbox;
+    align-content: center;
+    justify-content: center;
+}
+
+input[type=number]{
+    width: 2rem;
+    background-color: #ffffff4d; 
+    border-radius: 0.3rem;
+    box-shadow: 0rem 0.5rem 0.5rem rgb(0, 0, 0,0.40);
     border-style: none;
     color: rgba(255, 255, 255, 0.767);
 }
@@ -101,12 +112,3 @@ body{
     box-shadow: 0rem 0.5rem 0.5rem rgb(0, 0, 0,0.40);
     border-style: none;
 }
-
-.hidden{
-    display: none;
-}
-
-img:hover {
-    transform: scaleX(-1);
-    }
-

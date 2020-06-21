@@ -6,57 +6,55 @@
     <title>ENCODE</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div id="root">
-    
-      <div id="firstPage" class="firstPage">
-      <header>
-     
-      <div class="container-header">
-        <div class="logo-tittle">
-         <img src="logo-tittle.png" alt="logo-tittle encode">
+    <body>
+      <div id="root">
+
+<!--first page with big logo and "start" button-->
+
+        <div id="firstPage" class="firstPage">
+          <header>
+            <div class="container-header">
+              <div class="logo-tittle">
+                <img src="logo-tittle.png" alt="logo-tittle encode">
+              </div>
+            </div>
+            <div class= "welcome-start">
+              <button id="start" name="btn-start" class="btn-start">entrar</button>
+            </div>
+          </header>
         </div>
       </div>
-         <div class= "welcome-start">
-            <button id="start" name="btn-start" class="btn-start">entrar</button>
+
+<!--second page with input and result text boxes, includes copy and reset buttons-->
+
+      <div id="cipherPage" class="hidden"> 
+        <div class="secondPage">
+          <header>
+            <div class="container-header">
+              <div class="container-menu-logo">
+                <img width="224.65px" height="223px" src="logo-tittle.png" alt="logo-tittle encode">
+              </div> 
+            </div>
+            <div class="form-content">
+              <div id="textForm"> 
+                <textarea id="inputText" rows="8" cols="35" spellcheck="false" placeholder=" Escribe aquí tu mensaje..."></textarea><br>
+                <label>#</label>
+                <input type="number" id="offset" min="1" max="" required> <!--min = "1" prevents negative-->
+                <button id="encode-btn" class="btn-content" >Cifrar</button>
+                <button id="decode-btn" class="btn-content" >Descifrar</button>
+              </div>
+              <br>
+              <div id="output">
+                <textarea id="outputText" rows="8" cols="35" spellcheck="false" name="plaintext"></textarea><br>
+                <button id="copy-btn" class="btn-content" >Copiar</button>
+                <button id="erase-btn" class="btn-content" >Borrar</button>
+              </div>
+            </div>
+          </header>
+        </div>
       </div>
-    </header>
-    </div>
-  </div>
-
-<!--second page-->
-
-
-<div id="cipherPage" class="hidden"> 
-<div class="secondPage">
-  <header>
-    <div class="container-header">
-<div class="container-menu-logo">
-  <img width="224.65px" height="223px" src="logo-tittle.png" alt="logo-tittle encode">
-</div> 
-</div>
-<div class="form-content">
-<form id="textForm"> 
-    <textarea id="inputText" rows="8" cols="35" spellcheck="false" placeholder=" Escribe aquí tu mensaje..."></textarea><br>
-    <label>#</label>
-    <input type="number" id="offset" value="" min="1" max=""> <!--min = "1" prevents negative-->
-  <button id="encode" class="btn-content" type="submit" value="cipher">Cifrar</button>
-  <button id="decode" class="btn-content" type="submit" value="decipher">Descifrar</button>
-  </form>
-  <br>
-  <div id='output'>
-    <textarea id="outputText" rows="8" cols="35" spellcheck="false" name="plaintext"></textarea><br>
-    <button id="copy" class="btn-content" value="copy">Copiar</button>
-    <button id="erase" class="btn-content" value="erase">Borrar</button>
-  </div>
-</div>
-</header>
-</div>
-</div>
-
-
     <script src="index.js" type="module"></script>
-  </body>
+    </body>
 </html>
 
 
