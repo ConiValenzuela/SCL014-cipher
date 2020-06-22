@@ -43,11 +43,12 @@ encode:(offset, inputText) => {
     //if is not, dont shift ASCII table position.
     } else {
     newAsciiNum2 = asciiNum2;
+    //newText2 = newText2 + inputText.charAt(i);
   }
   //obtain letters corresponding to ASCII table numbers and concatenate them into a string.
   newText2 += String.fromCharCode(newAsciiNum2);
   }
   return newText2
-  } 
+  }
 };
 export default cipher;

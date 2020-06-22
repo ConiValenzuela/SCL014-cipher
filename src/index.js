@@ -34,12 +34,14 @@ document.getElementById("copy-btn").addEventListener("click", function copyText(
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
+    location.reload();
+
+    
 });
 
 //erase button clears input information.
 document.getElementById("erase-btn").addEventListener("click", function clearContents () {
-    document.getElementById("outputText").value= "";
-    document.getElementById("inputText").value= "";
+    location.reload();
 });
 
 //console.log(cipher);
