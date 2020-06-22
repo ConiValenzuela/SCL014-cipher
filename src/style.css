@@ -6,7 +6,7 @@ body{
 }
 
 .container-header{
-    display: flex;
+    display: flexbox;
     align-items: center;
     text-align: center;
     justify-content: center;
