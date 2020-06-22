@@ -17,7 +17,6 @@ describe('cipher', () => {
       expect(cipher.encode(33,"ABCDEFGHIJKLMNOPQRSTUVWXYZ")).toBe("HIJKLMNOPQRSTUVWXYZABCDEFG");
     });
     
-
   describe('cipher.decode', () => {
 
     test('should be a function', () => {
