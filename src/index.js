@@ -33,9 +33,7 @@ document.getElementById("copy-btn").addEventListener("click", function copyText(
     const copyText = document.getElementById("outputText");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
-    document.execCommand("copy");
-
-    
+    document.execCommand("copy"); 
 });
 
 //erase button clears input information.
