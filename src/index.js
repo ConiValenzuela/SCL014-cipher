@@ -14,7 +14,7 @@ document.getElementById("start").addEventListener("click", function displayCiphe
 const buttonEncode = document.getElementById("encode-btn");
 buttonEncode.addEventListener("click", function () {
     inputText = document.getElementById("inputText").value;
-    offset = document.getElementById("offset").value;
+    offset = parseInt(document.getElementById("offset").value);
     let newText = cipher.encode(offset, inputText);
     document.getElementById("outputText").innerHTML = newText;
 });
@@ -23,7 +23,7 @@ buttonEncode.addEventListener("click", function () {
 const buttonDecode = document.getElementById("decode-btn");
 buttonDecode.addEventListener("click", function () {
     inputText = document.getElementById("inputText").value;
-    offset = document.getElementById("offset").value;
+    offset = parseInt(document.getElementById("offset").value);
     let newText = cipher.decode(offset, inputText);
     document.getElementById("outputText").innerHTML = newText;
 });
