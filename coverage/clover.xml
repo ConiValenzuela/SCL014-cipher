@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1592852427476" clover="3.2.0">
-  <project timestamp="1592852427477" name="All files">
-    <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2" elements="29" coveredelements="25" complexity="0" loc="19" ncloc="19" packages="1" files="1" classes="1"/>
-    <file name="cipher.js" path="C:\Users\Coni\Desktop\CIPHER PROY\SCL014-cipher\src\cipher.js">
-      <metrics statements="19" coveredstatements="17" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
+<coverage generated="1593545395270" clover="3.2.0">
+  <project timestamp="1593545395271" name="All files">
+    <metrics statements="20" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2" elements="30" coveredelements="26" complexity="0" loc="20" ncloc="20" packages="1" files="1" classes="1"/>
+    <file name="cipher.js" path="C:\Users\Coni\Desktop\Laboratoria\CIPHER PROY\SCL014-cipher\src\cipher.js">
+      <metrics statements="20" coveredstatements="18" conditionals="8" coveredconditionals="6" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
       <line num="9" count="1" type="stmt"/>
@@ -20,9 +20,10 @@
       <line num="38" count="26" type="stmt"/>
       <line num="40" count="26" type="cond" truecount="3" falsecount="1"/>
       <line num="42" count="26" type="stmt"/>
-      <line num="45" count="0" type="stmt"/>
-      <line num="49" count="26" type="stmt"/>
-      <line num="51" count="1" type="stmt"/>
+      <line num="43" count="26" type="stmt"/>
+      <line num="44" count="26" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

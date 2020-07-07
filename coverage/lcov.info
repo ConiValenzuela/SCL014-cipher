@@ -1,5 +1,5 @@
 TN:
-SF:C:\Users\Coni\Desktop\CIPHER PROY\SCL014-cipher\src\cipher.js
+SF:C:\Users\Coni\Desktop\Laboratoria\CIPHER PROY\SCL014-cipher\src\cipher.js
 FN:4,(anonymous_0)
 FN:29,(anonymous_1)
 FNF:2
@@ -22,11 +22,12 @@ DA:36,1
 DA:38,26
 DA:40,26
 DA:42,26
-DA:45,0
-DA:49,26
-DA:51,1
-LF:19
-LH:17
+DA:43,26
+DA:44,26
+DA:47,0
+DA:53,1
+LF:20
+LH:18
 BRDA:15,0,0,26
 BRDA:15,0,1,0
 BRDA:15,1,0,26

@@ -39,14 +39,16 @@ encode:(offset, inputText) => {
     //number must be between 65 and 90; "A" and "Z" on ASCII table.
     if (asciiNum2 >=65 && asciiNum2 <=90) {
     //if it is, apply formula to shift letter position on ASCII table according to offset key.
-    newAsciiNum2 = (asciiNum2 - 65 - offset) %26 + 65;
+    newAsciiNum2 = (asciiNum2 + 65 - offset) %26 + 65;
+    console.log(newAsciiNum2);
+    newText2 += String.fromCharCode(newAsciiNum2);
     //if is not, dont shift ASCII table position.
     } else {
     newAsciiNum2 = asciiNum2;
     //newText2 = newText2 + inputText.charAt(i);
   }
   //obtain letters corresponding to ASCII table numbers and concatenate them into a string.
-  newText2 += String.fromCharCode(newAsciiNum2);
+  //newText2 += String.fromCharCode(newAsciiNum2);
   }
   return newText2
   }
